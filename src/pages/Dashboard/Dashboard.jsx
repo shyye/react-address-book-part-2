@@ -12,7 +12,8 @@ function Dashboard() {
         <ul>
           {contacts.map((contact) => (
             <li key={contact.id}>
-              <Link to={`/contact/${contact.id}`}>{contact.firstName} {contact.lastName}</Link>
+              {contact.firstName} {contact.lastName} - 
+              <Link to={`/contact/${contact.id}`}>View</Link>
             </li>
           ))}
         </ul>

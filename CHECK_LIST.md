@@ -28,7 +28,7 @@ flowchart TD
 
 ## Core
 
-- [ ] 1. A user can view a dashboard that displays a list of contacts
+- [x] 1. A user can view a dashboard that displays a list of contacts
     - Each contact in the list should be displayed as their first and last names
 - [ ] 2. A user can click a contact's name to view more details about that contact
     - The view should contain the contact's first and last name, as well as the contact's street and city
