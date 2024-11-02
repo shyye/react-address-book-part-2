@@ -32,7 +32,7 @@ flowchart TD
     - Each contact in the list should be displayed as their first and last names
 - [x] 2. A user can click a contact's name to view more details about that contact
     - The view should contain the contact's first and last name, as well as the contact's street and city
-- [ ] 3. A user can create a contact via a form, accessed by clicking a "Create a contact" menu link
+- [x] 3. A user can create a contact via a form, accessed by clicking a "Create a contact" menu link
     - The form should create a contact with a first and last name, as well as a street and city
     - When submitted, the contact data should be sent to an API that saves it
     - The user should then be automatically navigated back to the contact list

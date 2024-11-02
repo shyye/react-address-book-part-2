@@ -16,6 +16,19 @@ function App() {
     setContacts(data);
   };
 
+  // On add/create, save data to api
+  const saveData = async (contact) => {
+    const res = await fetch("https://boolean-uk-api-server.fly.dev/shyye/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(contact),
+    });
+    const data = await res.json();
+    setContacts([...contacts, data]);
+  };
+
   // Load data
   useEffect(() => {
     getData();
@@ -32,7 +45,7 @@ function App() {
           </ul>
         </nav>
       </header>
-      <AppContext.Provider value={{ contacts, setContacts }}>
+      <AppContext.Provider value={{ contacts, setContacts, saveData }}>
         <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/add" element={<ContactView />} />
