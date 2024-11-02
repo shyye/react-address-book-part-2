@@ -19,7 +19,6 @@ function App() {
   // Load data
   useEffect(() => {
     getData();
-    console.log(contacts);
   }, []);
 
   return (
@@ -44,4 +43,4 @@ function App() {
   );
 }
 
-export default App;
+export {App, AppContext};
