@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import ContactView from "./pages/ContactView/ContactView";
@@ -19,6 +19,7 @@ function App() {
   // Load data
   useEffect(() => {
     getData();
+    console.log(contacts);
   }, []);
 
   return (
@@ -27,8 +28,8 @@ function App() {
         <h1>Contacts</h1>
         <nav>
           <ul>
-            <li>Contact List</li>
-            <li>Add new Contact</li>
+            <li><Link to={"/"}>Contact List</Link></li>
+            <li><Link to={"/add"}>Add new Contact</Link></li>
           </ul>
         </nav>
       </header>
